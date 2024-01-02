@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react';
 export default function SideBar() {
   return (
     <div className=''>
-    <div className='h-[100vh] w-[200px] scrollbar scrollbar-thumb-gray-200 mt-4'>
+    <div className='h-[100vh] w-[200px] scrollbar'>
         <aside className='container'>
             <nav>
                 <ul className=''>
