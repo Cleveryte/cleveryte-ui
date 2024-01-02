@@ -3,9 +3,8 @@ import { Icon } from '@iconify/react';
 
 export default function SideBar() {
   return (
-    <div className=''>
-    <div className='h-[100vh] w-[200px] scrollbar'>
-        <aside className='container'>
+    <div className='container'>
+        <aside className='h-[85vh] w-[250px] overflow-auto border-b border-b-gray-100'>
             <nav>
                 <ul className=''>
                     <div className='flex items-center gap-2'>
@@ -16,7 +15,7 @@ export default function SideBar() {
                         <li>Themes</li>
                         <li>Responsive</li>
                         <li>Custimization</li>
-                  
+                
                 </ul>
                 <ul className='mt-6'>
                     <div className='flex items-center gap-2'>
@@ -38,7 +37,7 @@ export default function SideBar() {
                         <li>Navs & Tabs</li>
                         <li>Tables</li>
                         <li>Toast</li>
-                   
+                
                 </ul>
                 <ul className='mt-6'>
                     <div className='flex items-center gap-2'>
@@ -50,7 +49,6 @@ export default function SideBar() {
                 </ul>
             </nav>
         </aside>
-        </div>
     </div>
   )
 }
