@@ -1,11 +1,20 @@
 import './App.css'
 import Header from './components/Header'
+import DocumentationView from './views/DocumentationView';
+import BlogView from './views/BlogView';
+import { BrowserRouter as BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 
   return (
     <>
-      <Header />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<DocumentationView />} />
+          <Route path="/blog" element={<BlogView />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
