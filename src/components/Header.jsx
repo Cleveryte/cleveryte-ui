@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react';
 export default function Header() {
   return (
     <header className="shadow-lg">
-        <div className="container grid grid-cols-1 md:grid-cols-3 px-2 py-6">
+        <div className="container grid grid-cols-1 md:grid-cols-3 px-2">
             <section className="logo flex items-center md:pl-2">
                 <img 
                     src={LogoImage} 
