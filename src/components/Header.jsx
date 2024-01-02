@@ -11,19 +11,23 @@ export default function Header() {
         <header className="shadow-lg">
             <div className="container grid grid-cols-1 md:grid-cols-3 px-2 py-6 md:py-0">
                 <section className="logo flex items-center px-2 md:px-0">
-                    <img 
-                        src={LogoImage} 
-                        className="w-[2.5em] inline-block mr-2"
-                        alt="CleveryteUI" 
-                    />
-                    <h1 className="font-bold text-xl">
-                        Cleveryte UI
-                    </h1>
+                    <Link to="/">
+                        <img 
+                            src={LogoImage} 
+                            className="w-[2.5em] inline-block mr-2"
+                            alt="CleveryteUI" 
+                        />
+                    </Link>
+                    <Link to="/">
+                        <h1 className="font-bold text-xl">
+                            Cleveryte UI
+                        </h1>
+                    </Link>
                 </section>
 
                 <section className="logo flex items-center px-2">
                     <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-                    <div className="relative mt-6 md:mt-0 w-full">
+                    <div className={`relative mt-6 md:mt-0 w-full  ${currentPath == "/blog" ? "hidden":""}`}>
                         <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                             <Icon icon="material-symbols:search" width="20" height="20" className="text-[#C5C5C5]" />
                         </div>
