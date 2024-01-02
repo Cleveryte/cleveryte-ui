@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* GLOBALS */ 
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+
+  /* SIDEBAR */
+
+  nav ul li{
+    color: #5d5d5d;
+    padding-top: 1rem;
+    margin-left: 1.7rem;
+  }
