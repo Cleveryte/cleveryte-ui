@@ -1,15 +1,28 @@
 import LogoImage from "../assets/images/Cleveryte.png"
 import { Icon } from '@iconify/react';
 import { Link, useLocation  } from 'react-router-dom';
+import { useState } from 'react';
+
 
 export default function Header() {
+
+    const [mobileSearchMenu, setMobileSearchMenu] = useState(true);
+    const [mobileNavMenu, setMobileNavMenu] = useState(true);
+
+    const toggleMobileSearch = () => {
+        setMobileSearchMenu(!mobileSearchMenu);
+    }
+
+    const toggleMobileNav = () => {
+        setMobileNavMenu(!mobileNavMenu);
+    }
 
     const location = useLocation();
     const currentPath = location.pathname;
 
     return (
         <header className="shadow-lg">
-            <div className="container grid grid-cols-1 md:grid-cols-3 px-2 py-6 md:py-0">
+            <div className="container grid grid-cols-2 md:grid-cols-3 px-2 py-6 md:py-0">
                 <section className="logo flex items-center px-2 md:px-0">
                     <Link to="/">
                         <img 
@@ -19,13 +32,18 @@ export default function Header() {
                         />
                     </Link>
                     <Link to="/">
-                        <h1 className="font-bold text-xl">
+                        <h1 className="font-bold text-md md:text-[1rem] md:block">
                             Cleveryte UI
                         </h1>
                     </Link>
                 </section>
 
-                <section className="logo flex items-center px-2">
+                <div className="mobile-nav md:hidden">
+                    <Icon className={`${mobileNavMenu ? "" : "bg-[#9b00b6] text-white"} mt-1 float-end mr-2 p-2 rounded`} onClick={toggleMobileNav} icon="material-symbols:menu" width="40" height="40" />
+                    <Icon className={`${mobileSearchMenu ? "" : "bg-[#003466] text-white"} mt-1 float-end mr-4 p-2 rounded`} onClick={toggleMobileSearch} icon="material-symbols:search" width="40" height="40" />
+                </div>
+
+                <section className={`${mobileSearchMenu ? "hidden md:block" : ""} md:mt-4 logo flex items-center px-2 col-span-2 md:col-span-1`}>
                     <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                     <div className={`relative mt-6 md:mt-0 w-full  ${currentPath == "/blog" ? "hidden":""}`}>
                         <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -35,8 +53,8 @@ export default function Header() {
                     </div>
                 </section>
 
-                <nav className="w-full">
-                <ul className="font-medium md:float-end text-[#5E5E5E] flex flex-col p-0 md:p-4 mt-4 md:mt-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:border-0">
+                <nav className={`${mobileNavMenu ? "hidden md:block" : ""} w-full col-span-2 md:col-span-1`}>
+                <ul className="font-medium md:float-end text-[#5E5E5E] flex p-0 md:p-4 mt-4 md:mt-0 flex-row md:space-x-8 rtl:space-x-reverse text-md md:text-[1rem]">
                     <li>
                         <Link to="/" className={`block py-2 px-3 rounded ${currentPath == "/" ? "header-link-active":""}`}>Docs</Link>
                     </li>

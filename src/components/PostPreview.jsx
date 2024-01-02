@@ -21,7 +21,7 @@ export default function PostPreview({ size, title, topic, image, description, au
             <img src={image} alt="Post" className="rounded-md w-[50em]" />
             <h4 className="text-gray-600 mt-4 text-lg font-bold">{topic}</h4>
             <h2 className="text-black font-black text-4xl mb-1">{title}</h2>
-            <p className="text-gray-500">{description}</p>
+            <p className="text-gray-500 font-light">{description}</p>
             <p className="mt-4"><span className="font-bold text-[#9C00B6]">{author}</span> <span className="font-regular text-gray-400 ml-1">{date}</span></p>
         </>
       );
@@ -31,7 +31,7 @@ export default function PostPreview({ size, title, topic, image, description, au
             <img src={image} alt="Post" className="rounded-md w-full" />
             <h4 className="text-gray-600 mt-4 text-lg font-bold">{topic}</h4>
             <h2 className="text-black font-black text-5xl mb-1">{title}</h2>
-            <p className="text-gray-500">{description}</p>
+            <p className="text-gray-500 font-light">{description}</p>
             <p className="mt-4 text-md text-[#9C00B6] mb-6"><span className="font-bold">{author}</span> <span className="font-regular text-gray-400 ml-4">{date}</span></p>
         </>
       );
