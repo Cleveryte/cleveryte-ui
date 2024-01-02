@@ -7,6 +7,9 @@
   margin: 0 auto;
 }
 
+
+/* HEADER */ 
+
 .header-link-active {
   text-decoration-line: underline;
   text-decoration-thickness: 3px;
@@ -14,3 +17,5 @@
   text-decoration-color: #9C00B6;
   color: black;
 }
+
+
