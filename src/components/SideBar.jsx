@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState } from 'react';
 import { Icon } from '@iconify/react';
 
@@ -11,11 +10,14 @@ const toggleSideBar = () =>{
 }
 
   return (
-    <div className='container flex'>
+    <div>
+        <div className='flex absolute mx-2 right-0'> 
+                <Icon className={`${mobileSideBar ? 'hidden' : 'block md:hidden'} text-4xl opacity-25`} icon="gg:close-r" onClick={toggleSideBar} color='#5d5d5d' />
+        </div>
          <div className='block md:hidden'>
                 <Icon className={`${mobileSideBar ? '' : 'hidden'} text-3xl text-[#003466] rounded-lg m-0 w-[30px] h-[30px]`} onClick={toggleSideBar} icon="lucide:panel-left" />
             </div>
-        <aside className={`${mobileSideBar ? "hidden md:block" : ""} h-[85vh] w-[250px] overflow-auto border-b border-b-gray-100`}>
+        <aside className={`${mobileSideBar ? "hidden md:block" : ""} h-[85vh] w-[250px] mt-2 overflow-auto border-b border-b-gray-100`}>
             <nav>
                 <ul className=''>
                     <div className='flex items-center gap-2'>
@@ -60,9 +62,7 @@ const toggleSideBar = () =>{
                 </ul>
             </nav>
         </aside>
-        <div className='flex justify-end mx-2'> 
-                <Icon className={`${mobileSideBar ? 'hidden' : 'block md:hidden'} text-4xl opacity-25`} icon="gg:close-r" onClick={toggleSideBar} color='#5d5d5d' />
-            </div>
+        
     </div>
   )
 }
