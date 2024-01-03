@@ -1,10 +1,21 @@
 import React from 'react'
+import { useState } from 'react';
 import { Icon } from '@iconify/react';
 
 export default function SideBar() {
+
+const [mobileSideBar, setMobileSideBar] = useState(true);
+
+const toggleSideBar = () =>{
+    setMobileSideBar(!mobileSideBar)
+}
+
   return (
-    <div className='container'>
-        <aside className='h-[85vh] w-[250px] overflow-auto border-b border-b-gray-100'>
+    <div className='container flex'>
+         <div className='block md:hidden'>
+                <Icon className={`${mobileSideBar ? '' : 'hidden'} text-4xl bg-gray-200 bg-opacity-35`} onClick={toggleSideBar} icon="ci:chevron-right-duo" />
+            </div>
+        <aside className={`${mobileSideBar ? "hidden md:block" : ""} h-[85vh] w-[250px] overflow-auto border-b border-b-gray-100`}>
             <nav>
                 <ul className=''>
                     <div className='flex items-center gap-2'>
@@ -49,6 +60,9 @@ export default function SideBar() {
                 </ul>
             </nav>
         </aside>
+        <div className='flex justify-end mx-2'> 
+                <Icon className={`${mobileSideBar ? 'hidden' : 'block md:hidden'} text-4xl opacity-25`} icon="gg:close-r" onClick={toggleSideBar} color='#5d5d5d' />
+            </div>
     </div>
   )
 }
