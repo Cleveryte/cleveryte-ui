@@ -40,12 +40,12 @@ export default function Header() {
 
                 <div className="mobile-nav md:hidden">
                     <Icon className={`${mobileNavMenu ? "" : "bg-[#9b00b6] text-white"} mt-1 float-end mr-2 p-2 rounded`} onClick={toggleMobileNav} icon="material-symbols:menu" width="40" height="40" />
-                    <Icon className={`${mobileSearchMenu ? "" : "bg-[#003466] text-white"} mt-1 float-end mr-4 p-2 rounded`} onClick={toggleMobileSearch} icon="material-symbols:search" width="40" height="40" />
+                    <Icon className={`${mobileSearchMenu ? "" : "bg-[#003466] text-white"} ${currentPath == "/blog" ? "hidden":""} mt-1 float-end mr-4 p-2 rounded`} onClick={toggleMobileSearch} icon="material-symbols:search" width="40" height="40" />
                 </div>
 
                 <section className={`${mobileSearchMenu ? "hidden md:block" : ""} md:mt-4 logo flex items-center px-2 col-span-2 md:col-span-1`}>
                     <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-                    <div className={`relative mt-6 md:mt-0 w-full  ${currentPath == "/blog" ? "hidden":""}`}>
+                    <div className={`relative mt-6 md:mt-0 w-full  ${currentPath.includes('/blog') ? "hidden":""}`}>
                         <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                             <Icon icon="material-symbols:search" width="20" height="20" className="text-[#C5C5C5]" />
                         </div>
