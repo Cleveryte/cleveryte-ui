@@ -13,7 +13,7 @@ const toggleSideBar = () =>{
   return (
     <div className='container flex'>
          <div className='block md:hidden'>
-                <Icon className={`${mobileSideBar ? '' : 'hidden'} text-4xl bg-gray-200 bg-opacity-35`} onClick={toggleSideBar} icon="ci:chevron-right-duo" />
+                <Icon className={`${mobileSideBar ? '' : 'hidden'} text-4xl text-[#003466] rounded-lg`} onClick={toggleSideBar} icon="lucide:panel-left" />
             </div>
         <aside className={`${mobileSideBar ? "hidden md:block" : ""} h-[85vh] w-[250px] overflow-auto border-b border-b-gray-100`}>
             <nav>
