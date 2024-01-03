@@ -27,7 +27,7 @@ export default function Header() {
                     <Link to="/">
                         <img 
                             src={LogoImage} 
-                            className="w-[2.5em] inline-block mr-2"
+                            className="w-[2em] inline-block mr-2"
                             alt="CleveryteUI" 
                         />
                     </Link>

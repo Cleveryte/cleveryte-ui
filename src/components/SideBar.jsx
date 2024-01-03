@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Icon } from '@iconify/react';
+import { Link } from 'react-router-dom';
 
 export default function SideBar() {
 
@@ -24,8 +25,12 @@ const toggleSideBar = () =>{
                         <Icon className='text-2xl' icon="clarity:book-solid" color='#003366' />
                         <h2 className='text-xl font-semibold'>Getting Started</h2>
                     </div>
-                        <li>Introduction</li>
-                        <li>Themes</li>
+                        <Link to={"/introduction"}>
+                            <li>Introduction</li>
+                        </Link>
+                        <Link to={"/themes"}>
+                            <li>Themes</li>
+                        </Link>
                         <li>Responsive</li>
                         <li>Custimization</li>
                 
