@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Icon } from '@iconify/react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function SideBar() {
 
@@ -9,6 +9,9 @@ const [mobileSideBar, setMobileSideBar] = useState(true);
 const toggleSideBar = () =>{
     setMobileSideBar(!mobileSideBar)
 }
+
+const location = useLocation();
+const currentPath = location.pathname;
 
   return (
     <div>
@@ -22,16 +25,18 @@ const toggleSideBar = () =>{
             <nav>
                 <ul className=''>
                     <div className='flex items-center gap-2'>
-                        <Icon className='text-2xl' icon="clarity:book-solid" color='#003366' />
+                        <Icon className='text-2xl' icon="clarity:book-solid" color='#003366'/>
                         <h2 className='text-xl font-semibold'>Getting Started</h2>
-                    </div>
-                        <Link to={"/introduction"}>
-                            <li>Introduction</li>
-                        </Link>
-                        <Link to={"/themes"}>
-                            <li>Themes</li>
-                        </Link>
+                    </div> 
+                    <Link className={`${currentPath == "/" ? 'sidebar-link-active' : ''}`} to={"/"}>
+                        <li>Introduction</li>
+                    </Link>
+                    <Link className={`${currentPath == "/themes" ? 'sidebar-link-active' : ''}`} to={"/themes"}>
+                        <li>Themes</li>
+                    </Link>
+                    <Link className={`${currentPath == "/responsive" ? 'sidebar-link-active' : ''}`} to={"/responsive"}>
                         <li>Responsive</li>
+                    </Link>
                         <li>Custimization</li>
                 
                 </ul>

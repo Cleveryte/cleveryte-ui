@@ -6,7 +6,7 @@ export default function Introduction() {
         <div className="grid grid-cols-1 md:grid-cols-[280px_70%]">
             <SideBar/>
             <div className="content mt-2">
-                Buenos días
+               Introduction
             </div>
         </div>     
     </main>
