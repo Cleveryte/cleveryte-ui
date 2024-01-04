@@ -14,7 +14,6 @@ export default function BlogView() {
                     <PostPreview postId={""}  size={"small"} image={PostImage1} topic={"Development"} title={"The journey starts here"} author={"Cleveryte"} date={"January 02, 2024"} description={"Embarking on CleveryteUI, we stand at the brink of a new journey. Today marks the initiation of the development phase for this components library, a pivotal step toward building websites with unprecedented speed and efficiency."} />
                     <PostPreview postId={""}  size={"small"} image={PostImage1} topic={"Development"} title={"The journey starts here"} author={"Cleveryte"} date={"January 02, 2024"} description={"Embarking on CleveryteUI, we stand at the brink of a new journey. Today marks the initiation of the development phase for this components library, a pivotal step toward building websites with unprecedented speed and efficiency."} />
                     
-                    
                 </div>
             </div>
 
