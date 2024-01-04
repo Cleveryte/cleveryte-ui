@@ -1,6 +1,7 @@
 import { Link  } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import SideBar from "../../../components/SideBar";
+import ContentNavButtons from '../../../components/ContentNavButtons';
 
 export default function Introduction() {
   return (
@@ -24,20 +25,11 @@ export default function Introduction() {
               <p className="text-[#9A9A9A] mb-2">To kickstart your experience, dive into our collection of components. <br /> Browse through the extensive list, find the perfect match for your project, and seamlessly integrate it into your codebase. Getting started is as easy as selecting a component, copying the provided code snippet, and customizing it to align with your design vision.</p>
 
               <p className="text-[#9A9A9A] mb-2">Cleveryte UI empowers you to create polished and sophisticated user interfaces with minimal effort. Start exploring the possibilities now, and witness the seamless fusion of functionality and style in your web applications.</p>
+
+              <p className="text-[#9A9A9A] mt-6">Make sure you have installed Tailwind CSS on your project! <br /> Check <a className="hover:underline font-bold text-[#9B00B6]" href="https://tailwindcss.com/docs/installation" target="_blank" rel="noreferrer">Tailwind CSS Documentation</a></p>
               
               {/* Page navigation */}
-              <div className="grid grid-cols-2">
-                <div className="left text-start">
-
-                </div>
-                <div className="right text-end">
-                  <Link to={"/themes"}>
-                    <button className="my-6 text-black px-4 py-2 rounded flex items-center float-end">
-                      Themes <Icon icon="teenyicons:right-outline" width="13" height="13" className="ml-1" /> 
-                    </button>
-                  </Link>
-                </div>
-              </div>
+              <ContentNavButtons previousLink={""} nextLink={"/themes"} />
 
               
 

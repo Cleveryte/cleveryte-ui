@@ -36,6 +36,7 @@ function App() {
           <Route path="/blog/:id" element={<BlogPostView />} />
              {/* GETTING STARTED */}
           <Route path="/" element={<Introduction />} />
+          <Route path="/introduction" element={<Introduction />} />
           <Route path="/themes" element={<Themes />} />
           <Route path="/responsive" element={<Responsive />} />
           <Route path="/customization" element={<Customization />} />
