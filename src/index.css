@@ -26,4 +26,6 @@ body {
     margin-left: 1.7rem;
   }
 
-  
+  .open-sans{
+    font-family: 'Open Sans', sans-serif;
+  }
