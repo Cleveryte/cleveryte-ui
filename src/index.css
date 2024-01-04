@@ -26,6 +26,18 @@ body {
     margin-left: 1.7rem;
   }
 
-  .open-sans{
-    font-family: 'Open Sans', sans-serif;
+  .bottom-rounded {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .bottom-rounded::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; /* Distancia entre el texto y el borde inferior */
+    left: 28px;
+    width: 20%;
+    height: 3px; /* Grosor del borde inferior */
+    background-color: #9b00b6; /* Color del borde inferior */
+    border-radius: 5px; /* Radio para redondear los extremos */
   }
