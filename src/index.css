@@ -34,10 +34,10 @@ body {
   .bottom-rounded::after {
     content: '';
     position: absolute;
-    bottom: -3px; /* Distancia entre el texto y el borde inferior */
+    bottom: -3px;
     left: 28px;
-    width: 20%;
-    height: 3px; /* Grosor del borde inferior */
-    background-color: #9b00b6; /* Color del borde inferior */
-    border-radius: 5px; /* Radio para redondear los extremos */
+    width: 20px;
+    height: 3px; 
+    background-color: #9b00b6; 
+    border-radius: 5px;
   }
