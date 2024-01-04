@@ -26,4 +26,6 @@ body {
     margin-left: 1.7rem;
   }
 
-  
+  .post-title{
+    font-family: 'Nunito Sans', sans-serif;
+  }
