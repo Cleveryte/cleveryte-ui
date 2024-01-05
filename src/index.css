@@ -5,6 +5,14 @@
 
 /* GLOBALS */ 
 
+:root {
+  --background-color-light: #ffffff;
+  --text-color-light: #000000;
+  --background-color-dark: #1f1f1f;
+  --text-color-dark: #ffffff;
+}
+
+
 body {
     margin: 0;
     padding: 0;
