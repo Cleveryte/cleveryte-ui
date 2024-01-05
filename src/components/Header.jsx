@@ -28,7 +28,7 @@ export default function Header() {
   };
 
     return (
-        <header className="shadow-lg dark:bg-[#1E1E1E] dark:text-white">
+        <header className="shadow-lg dark:bg-black ">
             <div className="container grid grid-cols-2 md:grid-cols-3 px-2 py-6 md:py-0">
                 <section className="logo flex items-center px-2 md:px-0">
                     <Link to="/">
@@ -39,7 +39,7 @@ export default function Header() {
                         />
                     </Link>
                     <Link to="/">
-                        <h1 className="font-bold text-md md:text-[1rem] md:block">
+                        <h1 className="font-bold text-md dark:text-white md:text-[1rem] md:block">
                             Cleveryte UI
                         </h1>
                     </Link>
@@ -56,17 +56,17 @@ export default function Header() {
                         <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                             <Icon icon="material-symbols:search" width="20" height="20" className="text-[#C5C5C5]" />
                         </div>
-                        <input type="text" id="default-search" className="w-full p-2 ps-10 text-md text-gray-900 border border-[#C5C5C5] rounded-lg outline-none" autoComplete="off" spellCheck="false" placeholder="Search" required />
+                        <input type="text" id="default-search" className="w-full p-2 ps-10 text-md dark:bg-[#1E1E1E] text-gray-900 border border-[#C5C5C5] rounded-lg outline-none" autoComplete="off" spellCheck="false" placeholder="Search" required />
                     </div>
                 </section>
 
                 <nav className={`${mobileNavMenu ? "hidden md:block" : ""} w-full col-span-2 md:col-span-1`}>
-                <ul className="font-medium md:float-end text-[#5E5E5E] dark:text-white flex p-0 md:p-4 mt-4 md:mt-0 flex-row md:space-x-8 rtl:space-x-reverse text-md md:text-[1rem]">
-                    <li className="dark:text-white">
+                <ul className="font-medium md:float-end text-[#5E5E5E] flex p-0 md:p-4 mt-4 md:mt-0 flex-row md:space-x-8 rtl:space-x-reverse text-md md:text-[1rem]">
+                    <li>
                         <Link to="/" className={`block py-2 px-3 rounded ${currentPath == "/" ? "header-link-active dark:text-white":""}`}>Docs</Link>
                     </li>
-                    <li className="dark:text-white">
-                        <Link to="/blog" className={`block py-2 px-3 rounded ${currentPath == "/blog" ? "header-link-active":""}`}>Blog</Link>
+                    <li>
+                        <Link to="/blog" className={`block py-2 px-3 rounded ${currentPath == "/blog" ? "header-link-active dark:text-white":""}`}>Blog</Link>
                     </li>
                     <li>
                         <a href="https://github.com/Cleveryte/cleveryte-ui" target="_blank" rel="noreferrer" className="py-2 px-3 rounded flex items-center">

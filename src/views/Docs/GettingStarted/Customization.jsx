@@ -1,6 +1,6 @@
 import SideBar from '../../../components/SideBar'
 import ContentNavButtons from '../../../components/ContentNavButtons';
-import { CodeBlock, atomOneDark } from "react-code-blocks";
+import CustomCodeBlock from '../../../components/CustomCodeBlock';
 
 export default function Customization() {
   return (
@@ -11,14 +11,7 @@ export default function Customization() {
                 <h2 className="text-3xl font-bold mb-2">Customization</h2>
                 <p className="text-[#9A9A9A] mb-6">At Cleveryte, we take pride in offering unparalleled flexibility and customization options for our UI components. Our commitment to empowering developers and designers is reflected in the fact that all Cleveryte UI components are 100% customizable. <br /> <br />Whether you prefer harnessing the convenience of Tailwind CSS utility classes or delving into the intricacies of custom CSS, our components provide you with the freedom to tailor every aspect of the user interface to suit your unique design requirements. <br /> <br />With Tailwind CSS&apos;s extensive utility classes, you can easily modify styles, layouts, and responsiveness, ensuring a seamless integration into your project. Alternatively, for those who seek a more hands-on and bespoke approach, our components welcome the use of custom CSS, allowing you to exercise full creative control over the appearance and behavior of each element. At Cleveryte, we understand that every project has its own set of design needs, and our commitment to complete customization ensures that our UI components effortlessly adapt to your vision, making your development process smoother and more tailored to your specific aesthetic preferences.</p>
                 
-                <CodeBlock
-                  text='<p class="text-md text-black">This is a paragraph</p>'
-                  language='html'
-                  showLineNumbers={false}
-                  theme={atomOneDark}
-                  startingLineNumber={0}
-                  codeBlock={{ lineNumbers: false, wrapLines: true }}
-                />       
+                <CustomCodeBlock code={"<p className='text-xl text-black'>This is a paragraph</p>"} language={"html"} />
              
               
               {/* Page navigation */}
