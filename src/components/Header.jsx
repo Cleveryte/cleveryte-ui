@@ -20,6 +20,7 @@ export default function Header() {
     const location = useLocation();
     const currentPath = location.pathname;
 
+
     const storedDarkMode = localStorage.getItem('darkMode');
     const initialDarkMode = storedDarkMode ? JSON.parse(storedDarkMode) : false;
 
@@ -84,7 +85,7 @@ export default function Header() {
                     </li>
                     <div className="flex items-center space-x-2">
                         <button 
-                            className={`text-2xl cursor-pointer ${ initialDarkMode ? 'text-blue-500' : 'text-yellow-400' }`}
+                            className={`text-2xl cursor-pointer ${ initialDarkMode ? 'text-yellow-400' : 'text-blue-500' }`}
                             onClick={toggleTheme}
                             >
                             {initialDarkMode ? <Icon icon="pepicons-print:sun" />:<Icon icon="pepicons-print:moon" />}
