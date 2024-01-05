@@ -18,7 +18,7 @@ export default function ContentNavButtons({previousLink, nextLink}) {
         previousBtn = 
             <>
                 <Link to={previousLink}>
-                    <button className="my-6 text-black py-2 rounded flex items-center float-start">
+                    <button className="my-6 text-black dark:text-white py-2 rounded flex items-center float-start">
                         <Icon icon="teenyicons:left-outline" width="13" height="13" className="mr-1" /> {previousText} 
                     </button>
                 </Link>
@@ -29,7 +29,7 @@ export default function ContentNavButtons({previousLink, nextLink}) {
         nextBtn = 
             <>
                 <Link to={nextLink}>
-                    <button className="my-6 text-black py-2 rounded flex items-center float-end">
+                    <button className="my-6 text-black dark:text-white py-2 rounded flex items-center float-end">
                         {nextText} <Icon icon="teenyicons:right-outline" width="13" height="13" className="ml-1" /> 
                     </button>
                 </Link>
