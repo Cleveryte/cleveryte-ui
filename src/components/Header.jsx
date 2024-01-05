@@ -20,7 +20,7 @@ export default function Header() {
     const location = useLocation();
     const currentPath = location.pathname;
 
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(true);
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
