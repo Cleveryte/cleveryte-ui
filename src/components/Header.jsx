@@ -1,7 +1,7 @@
 import LogoImage from "../assets/images/Cleveryte.png"
 import { Icon } from '@iconify/react';
 import { Link, useLocation  } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 export default function Header() {
@@ -20,12 +20,22 @@ export default function Header() {
     const location = useLocation();
     const currentPath = location.pathname;
 
-    const [darkMode, setDarkMode] = useState(true);
 
-  const toggleTheme = () => {
-    setDarkMode(!darkMode);
-    document.documentElement.classList.toggle('dark', darkMode);
-  };
+    const storedDarkMode = localStorage.getItem('darkMode');
+    const initialDarkMode = storedDarkMode ? JSON.parse(storedDarkMode) : false;
+
+    const [darkMode, setDarkMode] = useState(initialDarkMode);
+
+    useEffect(() => {
+        document.documentElement.classList.toggle('dark', darkMode);
+        document.documentElement.setAttribute('data-color-scheme', darkMode ? "dark" : "light");
+    }, [darkMode]);
+
+    const toggleTheme = () => {
+        const newDarkMode = !darkMode;
+        setDarkMode(newDarkMode);
+        localStorage.setItem('darkMode', JSON.stringify(newDarkMode));
+    };
 
     return (
         <header className="shadow-lg dark:bg-[#1E1E1E] ">
@@ -74,22 +84,11 @@ export default function Header() {
                         </a>
                     </li>
                     <div className="flex items-center space-x-2">
-                    <button 
-                    className={`text-2xl cursor-pointer ${
-                        darkMode ? 'text-yellow-500' : 'text-gray-300'
-                        }`}
-                        onClick={toggleTheme}
-                        >
-                    <Icon icon="pepicons-print:sun" />
-                     </button>
-                     <button
-                    className={`text-2xl cursor-pointer ${
-                        darkMode ? 'text-gray-300' : 'text-blue-500'
-                        }`}
-                        onClick={toggleTheme}
-                    >
-                        <Icon icon="pepicons-print:moon" />
-                        
+                        <button 
+                            className={`text-2xl cursor-pointer ${ initialDarkMode ? 'text-yellow-400' : 'text-blue-500' }`}
+                            onClick={toggleTheme}
+                            >
+                            {initialDarkMode ? <Icon icon="pepicons-print:sun" />:<Icon icon="pepicons-print:moon" />}
                         </button>
                     </div>
                     
