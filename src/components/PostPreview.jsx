@@ -49,7 +49,7 @@ export default function PostPreview({ size, title, topic, image, description, au
             </div>
             <h4 className="text-gray-600 mt-4 text-lg font-bold ">{topic}</h4>
             <Link to={`/blog/${postId}`}>
-              <h2 className="text-black font-black text-2xl md:text-5xl mb-1 hover:underline hover:underline-offset-4 hover:text-[#9C00B6]">{title}</h2>
+              <h2 className="dark:text-white text-black font-black text-2xl md:text-5xl mb-1 hover:underline hover:underline-offset-4 hover:text-[#9C00B6]">{title}</h2>
             </Link>
             <p className="text-gray-500 font-light">{description}</p>
             <p className="mt-4 text-md text-[#9C00B6] mb-6"><span className="font-bold">{author}</span> <span className="font-regular text-gray-400 ml-4">{date}</span></p>
