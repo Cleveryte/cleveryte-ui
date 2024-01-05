@@ -18,7 +18,7 @@ const currentPath = location.pathname;
          <div className='block md:hidden'>
                 <Icon className={`${mobileSideBar ? '' : 'hidden'} text-3xl text-[#003466] rounded-lg m-0 w-[30px] h-[30px]`} onClick={toggleSideBar} icon="lucide:panel-left" />
             </div>
-        <aside className={`${mobileSideBar ? "hidden md:block" : ""} h-[85vh] w-[250px] mt-2 overflow-auto border-b border-b-gray-100`}>
+        <aside className={`${mobileSideBar ? "hidden md:block" : ""} h-[100vh] w-[250px] mt-2 overflow-auto border-b border-b-gray-100`}>
             <nav>
                 <ul className=''>
                     <div className='flex items-center gap-2'>

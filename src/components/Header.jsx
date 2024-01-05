@@ -20,8 +20,15 @@ export default function Header() {
     const location = useLocation();
     const currentPath = location.pathname;
 
+    const [darkMode, setDarkMode] = useState(false);
+
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+    document.documentElement.classList.toggle('dark', darkMode);
+  };
+
     return (
-        <header className="shadow-lg">
+        <header className="shadow-lg dark:bg-black ">
             <div className="container grid grid-cols-2 md:grid-cols-3 px-2 py-6 md:py-0">
                 <section className="logo flex items-center px-2 md:px-0">
                     <Link to="/">
@@ -43,9 +50,9 @@ export default function Header() {
                     <Icon className={`${mobileSearchMenu ? "" : "bg-[#003466] text-white"} ${currentPath == "/blog" ? "hidden":""} mt-1 float-end mr-4 p-2 rounded`} onClick={toggleMobileSearch} icon="material-symbols:search" width="40" height="40" />
                 </div>
 
-                <section className={`${mobileSearchMenu ? "hidden md:block" : ""}md:mt-4 logo flex items-center px-2 col-span-2 md:col-span-1`}>
+                <section className={`${mobileSearchMenu ? "hidden md:block" : ""} md:mt-4 logo flex items-center px-2 col-span-2 md:col-span-1`}>
                     <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-                    <div className={`relative mt-6 md:mt-0 w-full  ${currentPath.includes('/blog') ? "hidden":""}`}>
+                    <div className={`relative mt-6 md:mt-0 w-full  ${currentPath.includes('/blog') ? "hidden":" "}`}>
                         <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                             <Icon icon="material-symbols:search" width="20" height="20" className="text-[#C5C5C5]" />
                         </div>
@@ -66,6 +73,26 @@ export default function Header() {
                             <Icon icon="mdi:github" width="25" height="25" />
                         </a>
                     </li>
+                    <div className="flex items-center space-x-2">
+                    <button 
+                    className={`text-2xl cursor-pointer ${
+                        darkMode ? 'text-yellow-500' : 'text-gray-300'
+                        }`}
+                        onClick={toggleTheme}
+                        >
+                    <Icon icon="pepicons-print:sun" />
+                     </button>
+                     <button
+                    className={`text-2xl cursor-pointer ${
+                        darkMode ? 'text-gray-300' : 'text-blue-500'
+                        }`}
+                        onClick={toggleTheme}
+                    >
+                   
+                        <Icon icon="pepicons-print:moon" />
+                        
+                        </button>
+                    </div>
                     
                 </ul>
                 </nav>
