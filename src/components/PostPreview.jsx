@@ -13,9 +13,9 @@ export default function PostPreview({ size, title, topic, image, description, au
                   </Link>  
               </div>
               <div className="col-span-2">
-                  <h4 className="text-gray-600 text-sm font-bold">{topic}</h4>
+                  <h4 className=" text-gray-600 text-sm font-bold">{topic}</h4>
                   <Link to={`/blog/${postId}`}>
-                    <h2 className="text-black font-black text-lg hover:underline hover:underline-offset-4 hover:text-[#9C00B6]">{title}</h2>
+                    <h2 className="dark:text-white text-black font-black text-lg hover:underline hover:underline-offset-4 hover:text-[#9C00B6]">{title}</h2>
                   </Link>  
                   <p className="text-gray-400 line-clamp-2 font-light mb-2">{description}</p>
                   <p><span className="font-bold text-[#9C00B6]">{author}</span> <span className="font-regular text-gray-300 ml-1">{date}</span></p>
@@ -33,10 +33,10 @@ export default function PostPreview({ size, title, topic, image, description, au
             </div>
             <h4 className="text-gray-600 mt-4 text-lg font-bold">{topic}</h4>
             <Link to={`/blog/${postId}`}>
-              <h2 className="text-black font-black text-xl md:text-4xl mb-1 hover:underline hover:underline-offset-4 hover:text-[#9C00B6]">{title}</h2>
+              <h2 className="dark:text-white text-black font-black text-xl md:text-4xl mb-1 hover:underline hover:underline-offset-4 hover:text-[#9C00B6]">{title}</h2>
             </Link>
             <p className="text-gray-500 font-light">{description}</p>
-            <p className="mt-4"><span className="font-bold text-[#9C00B6]">{author}</span> <span className="font-regular text-gray-400 ml-1">{date}</span></p>
+            <p className="mt-4"><span className="font-bold text-[#9C00B6]">{author}</span> <span className="dark:text-white font-regular text-gray-400 ml-1 ">{date}</span></p>
         </>
       );
     } else {
@@ -47,7 +47,7 @@ export default function PostPreview({ size, title, topic, image, description, au
                 <img src={image} alt="Post" className="rounded-md w-full transition duration-300 ease-in-out hover:scale-110" />
               </Link>
             </div>
-            <h4 className="text-gray-600 mt-4 text-lg font-bold">{topic}</h4>
+            <h4 className="text-gray-600 mt-4 text-lg font-bold ">{topic}</h4>
             <Link to={`/blog/${postId}`}>
               <h2 className="text-black font-black text-2xl md:text-5xl mb-1 hover:underline hover:underline-offset-4 hover:text-[#9C00B6]">{title}</h2>
             </Link>
