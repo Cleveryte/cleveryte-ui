@@ -30,8 +30,10 @@ export default function Introduction() {
               
               {/* Page navigation */}
               <ContentNavButtons previousLink={""} nextLink={"/themes"} />
+              
 
             </div>
+            
         </div>     
     </main>
   )
