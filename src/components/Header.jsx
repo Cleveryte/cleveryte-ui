@@ -38,7 +38,7 @@ export default function Header() {
     };
 
     return (
-        <header className="shadow-lg dark:bg-[#1E1E1E] ">
+        <header className="shadow-lg dark:bg-[#1E1E1E] relative">
             <div className="container grid grid-cols-2 md:grid-cols-3 px-2 py-6 md:py-0">
                 <section className="logo flex items-center px-2 md:px-0">
                     <Link to="/">

@@ -5,7 +5,9 @@ export default function Responsive() {
   return (
     <main className="container px-2 py-4">
         <div className="grid grid-cols-1 md:grid-cols-[280px_70%]">
+        <div className='relative'>
             <SideBar/>
+            </div>
             <div className="content mt-10 md:mt-2 px-2">
                 <h2 className="text-3xl font-bold mb-2">Responsive</h2>
                 <p className="text-[#9A9A9A] mb-6">A responsive website is a crucial element in today&apos;s digital landscape, playing a pivotal role in enhancing user experience and ensuring accessibility across various devices. With the diverse array of devices used to access the internet, from smartphones and tablets to desktop computers, a responsive design adapts seamlessly to different screen sizes and resolutions.</p>
