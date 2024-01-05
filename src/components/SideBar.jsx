@@ -14,14 +14,14 @@ const location = useLocation();
 const currentPath = location.pathname;
 
   return (
-    <div className='flex absolute z-20 md:relative bg-white'>
+    <div className='flex absolute z-20 md:relative bg-white dark:bg-[#292929]'>
          <div className='block md:hidden'>
                 <Icon className={`${mobileSideBar ? '' : 'hidden'} text-3xl text-[#003466] rounded-lg m-0 w-[30px] h-[30px]`} onClick={toggleSideBar} icon="lucide:panel-left" />
             </div>
         <aside className={`${mobileSideBar ? "hidden md:block" : ""} h-[100vh] w-[250px] mt-2 overflow-auto border-b border-b-gray-100`}>
             <nav>
                 <ul className=''>
-                    <div className='flex items-center gap-2'>
+                    <div className='flex items-center gap-2 text-black dark:text-white'>
                         <Icon className='text-2xl' icon="clarity:book-solid" color='#003366'/>
                         <h2 className='text-xl font-semibold'>Getting Started</h2>
                     </div> 
@@ -39,7 +39,7 @@ const currentPath = location.pathname;
                     </Link>
                 
                 </ul>
-                <ul className='mt-3 md:mt-6'>
+                <ul className='mt-3 md:mt-6 text-black dark:text-white'>
                     <div className='flex items-center gap-2'>
                         <Icon className='text-2xl' icon="material-symbols:dashboard" color='#003366' />
                         <h2 className='text-xl font-semibold'>Components</h2>
@@ -91,7 +91,7 @@ const currentPath = location.pathname;
                     </Link>
                 
                 </ul>
-                <ul className='mt-3 md:mt-6'>
+                <ul className='mt-3 md:mt-6 text-black dark:text-white'>
                     <div className='flex items-center gap-2'>
                         <Icon className='text-2xl' icon="jam:world" color='#003366' />
                         <h2 className='text-xl font-semibold'>About</h2>
