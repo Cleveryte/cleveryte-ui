@@ -1,13 +1,15 @@
-import { CodeBlock, monoBlue } from "react-code-blocks";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export default function CustomCodeBlock({ code, language }) {
+
+    const storedDarkMode = localStorage.getItem('darkMode');
+    const initialDarkMode = storedDarkMode ? JSON.parse(storedDarkMode) : false;
+
     return (
-        <CodeBlock
-            text={code}
-            language={language}
-            showLineNumbers={false}
-            theme={monoBlue}
-            startingLineNumber={0}
-        />
+        <SyntaxHighlighter language={language} style={docco}>
+            {code}
+        </SyntaxHighlighter>
+        
     );
 }
