@@ -1,5 +1,3 @@
-import { Link  } from 'react-router-dom';
-import { Icon } from '@iconify/react';
 import SideBar from "../../../components/SideBar";
 import ContentNavButtons from '../../../components/ContentNavButtons';
 
@@ -8,7 +6,7 @@ export default function Introduction() {
     <main className="container px-2 py-4">
         <div className="grid grid-cols-1 md:grid-cols-[280px_70%]">
             <div className='relative'>
-            <SideBar/>
+              <SideBar/>
             </div>
             <div className="content mt-10 md:mt-2 px-2">
               <h2 className="text-3xl font-bold mb-2 dark:text-white">Introduction</h2>
@@ -32,8 +30,6 @@ export default function Introduction() {
               
               {/* Page navigation */}
               <ContentNavButtons previousLink={""} nextLink={"/themes"} />
-
-              
 
             </div>
         </div>     
