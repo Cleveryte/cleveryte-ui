@@ -28,7 +28,7 @@ export default function Header() {
   };
 
     return (
-        <header className="shadow-lg dark:bg-black ">
+        <header className="shadow-lg dark:bg-[#1E1E1E] dark:text-white">
             <div className="container grid grid-cols-2 md:grid-cols-3 px-2 py-6 md:py-0">
                 <section className="logo flex items-center px-2 md:px-0">
                     <Link to="/">
@@ -61,11 +61,11 @@ export default function Header() {
                 </section>
 
                 <nav className={`${mobileNavMenu ? "hidden md:block" : ""} w-full col-span-2 md:col-span-1`}>
-                <ul className="font-medium md:float-end text-[#5E5E5E] flex p-0 md:p-4 mt-4 md:mt-0 flex-row md:space-x-8 rtl:space-x-reverse text-md md:text-[1rem]">
-                    <li>
-                        <Link to="/" className={`block py-2 px-3 rounded ${currentPath == "/" ? "header-link-active":""}`}>Docs</Link>
+                <ul className="font-medium md:float-end text-[#5E5E5E] dark:text-white flex p-0 md:p-4 mt-4 md:mt-0 flex-row md:space-x-8 rtl:space-x-reverse text-md md:text-[1rem]">
+                    <li className="dark:text-white">
+                        <Link to="/" className={`block py-2 px-3 rounded ${currentPath == "/" ? "header-link-active dark:text-white":""}`}>Docs</Link>
                     </li>
-                    <li>
+                    <li className="dark:text-white">
                         <Link to="/blog" className={`block py-2 px-3 rounded ${currentPath == "/blog" ? "header-link-active":""}`}>Blog</Link>
                     </li>
                     <li>
@@ -88,7 +88,6 @@ export default function Header() {
                         }`}
                         onClick={toggleTheme}
                     >
-                   
                         <Icon icon="pepicons-print:moon" />
                         
                         </button>
