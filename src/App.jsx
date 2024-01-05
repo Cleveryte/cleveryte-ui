@@ -30,7 +30,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Header />
+          <Header />
         <Routes>
           <Route path="/blog" element={<BlogView />} />
           <Route path="/blog/:id" element={<BlogPostView />} />

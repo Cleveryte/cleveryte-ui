@@ -14,7 +14,8 @@ const location = useLocation();
 const currentPath = location.pathname;
 
   return (
-    <div className='flex absolute z-20 md:relative bg-white dark:bg-[#292929]'>
+   <div className='sticky top-0'>
+     <div className='bg-white dark:bg-[#292929]'>
          <div className='block md:hidden'>
                 <Icon className={`${mobileSideBar ? '' : 'hidden'} text-3xl text-[#003466] dark:text-white rounded-lg m-0 w-[30px] h-[30px]`} onClick={toggleSideBar} icon="lucide:panel-left" />
             </div>
@@ -109,5 +110,6 @@ const currentPath = location.pathname;
                 <Icon className={`${mobileSideBar ? 'hidden' : 'block md:hidden'} text-4xl opacity-25`} icon="gg:close-r" onClick={toggleSideBar} color='#5d5d5d' />
         </div>
     </div>
+   </div>
   )
 }
