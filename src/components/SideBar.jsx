@@ -14,7 +14,7 @@ const location = useLocation();
 const currentPath = location.pathname;
 
   return (
-   <div className='sticky top-0'>
+   <div className='sticky top-0 h-screen'>
      <div className='bg-white dark:bg-[#292929]'>
          <div className='block md:hidden'>
                 <Icon className={`${mobileSideBar ? '' : 'hidden'} text-3xl text-[#003466] dark:text-white rounded-lg m-0 w-[30px] h-[30px]`} onClick={toggleSideBar} icon="lucide:panel-left" />
