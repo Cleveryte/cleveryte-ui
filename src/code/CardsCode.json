@@ -1,0 +1,8 @@
+{
+    "simple_card": {
+      "htmlPreview": "<div class=\"card rounded-lg bg-white dark:bg-[#121212] border border-[#DADADA] dark:border-none shadow-lg p-4 w-[40em]\"><h2 class=\"font-extrabold text-2xl text-black dark:text-white mb-2\">Card</h2> <p class=\"text-[#949393]\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget eleifend dolor. Ut a nisl nulla. Praesent a sem sapien. Vestibulum tincidunt ipsum euismod, vehicula lacus ullamcorper, varius dui. Phasellus faucibus magna eget purus ultrices, ut aliquam arcu efficitur.</p> </div>",
+      "htmlFormatted": "<div class=\"card rounded-lg bg-white dark:bg-[#121212] border border-[#DADADA] dark:border-none shadow-lg p-4 w-[40em]\">\n\t<h2 class=\"font-extrabold text-2xl text-black dark:text-white mb-2\">Card</h2>\n\t<p class=\"text-[#949393]\">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>\n</div>",
+      "jsxFormatted": "<div className=\"card rounded-lg bg-white dark:bg-[#121212] border border-[#DADADA] dark:border-none shadow-lg p-4 w-[40em]\">\n\t<h2 className=\"font-extrabold text-2xl text-black dark:text-white mb-2\">Card</h2>\n\t<p className=\"text-[#949393]\">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>\n</div>"
+    }
+  }
+

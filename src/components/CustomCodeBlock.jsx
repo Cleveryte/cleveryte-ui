@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Icon } from '@iconify/react';
 
-export default function CustomCodeBlock({ htmlCode, jsxCode }) {
+export default function CustomCodeBlock({ htmlPreview, htmlFormatted, jsxFormatted }) {
 
     let preview = "Preview";
     let html = "Html";
@@ -36,18 +36,18 @@ export default function CustomCodeBlock({ htmlCode, jsxCode }) {
                 </button>
             </div>       
 
-            <div className={`code-block w-full md:w-3/4 p-4 border-4 border-[#949393] dark:border-[#121212] 
+            <div className={`code-block w-full md:w-3/4 p-4 border-2 border-[#949393] dark:border-[#121212] overflow-auto
                 ${currentTab === preview ? "" : "bg-[#D9D9D9] dark:bg-[#1E1E1E]" } `}>
-                <div className={`${currentTab === preview ? "" : "hidden" }`} dangerouslySetInnerHTML={{ __html: htmlCode }}>
+                <div className={`${currentTab === preview ? "" : "hidden" }`} dangerouslySetInnerHTML={{ __html: htmlPreview }}>
                 </div>
 
-                <code className={`text-[#949393] ${currentTab === html ? "" : "hidden" }`}>
-                    {htmlCode}
-                </code>
+                <pre className={`text-[#949393] ${currentTab === html ? "" : "hidden" }`}>
+                    {htmlFormatted}
+                </pre>
 
-                <code className={`text-[#949393] ${currentTab === jsx ? "" : "hidden" }`}>
-                    {jsxCode}
-                </code>
+                <pre className={`text-[#949393] ${currentTab === jsx ? "" : "hidden" }`}>
+                    {jsxFormatted}
+                </pre>
             </div>
 
             
