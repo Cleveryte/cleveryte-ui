@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useRef } from "react";
 import { Icon } from '@iconify/react';
 
 export default function CustomCodeBlock({ htmlPreview, htmlFormatted, jsxFormatted }) {
@@ -7,9 +7,25 @@ export default function CustomCodeBlock({ htmlPreview, htmlFormatted, jsxFormatt
     let html = "Html";
     let jsx = "Jsx";
     const [currentTab, setCurrentTab] = useState(preview);
+    const copyButtonRef = useRef(null);
+    const [copyBtnText, setCopyBtnText] = useState("Copy");
 
     const copyCurrentCode = () => {
-
+        setCopyBtnText("Copied");
+        switch (currentTab) {
+            case html:
+                navigator.clipboard.writeText(htmlFormatted);
+                break;
+            case jsx:
+                navigator.clipboard.writeText(jsxFormatted);
+            break;
+        
+            default:
+                break;
+        }
+        setTimeout(() => {
+            setCopyBtnText("Copy");
+        }, 5000);
     }
 
     return (
@@ -30,9 +46,10 @@ export default function CustomCodeBlock({ htmlPreview, htmlFormatted, jsxFormatt
                     JSX
                 </button>  
 
-                <button onClick={() => setCurrentTab(jsx)} className={`py-2 px-4 bg-[#949393] dark:bg-[#121212] inline-flex items-baseline float-end
+                <button onClick={() => copyCurrentCode()} className={`py-2 px-4 bg-[#949393] dark:bg-[#121212] inline-flex items-baseline float-end
                     ${currentTab === preview ? "hidden" : "" }`}>
-                    <Icon icon="mdi:clipboard-outline" className="mr-2 relative top-1" /> Copy
+                    <Icon icon="mdi:clipboard-outline" className="mr-2 relative top-1" /> 
+                    <span ref={copyButtonRef}>{copyBtnText}</span>
                 </button>
             </div>       
 
