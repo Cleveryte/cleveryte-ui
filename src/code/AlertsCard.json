@@ -1,0 +1,49 @@
+
+{
+    "info_alert": {
+        "htmlPreview": "<div class=\"bg-blue-200 border border-[#759BFF] rounded-full p-2 w-96 text-black flex items-center gap-1\">\n<iconify-icon class=\"text-xl \"icon=\"material-symbols:info-outline-rounded\"></iconify-icon>\n <p class=\"text-sm font-bold\">New update is available</p></div>",
+        
+        "htmlFormatted": "<div class=\"bg-blue-200 border border-[#759BFF] rounded-full p-2 w-96 text-black flex items-center gap-1\">\n<iconify-icon class=\"text-xl \"icon=\"material-symbols:info-outline-rounded\"></iconify-icon>\n <p class=\"text-sm font-bold\">New update is available</p>\n</div>",
+
+      "jsxFormatted": "<div className='bg-blue-200 border border-[#759BFF] rounded-full p-2 w-96 text-black flex items-center gap-1'>\n\t<Icon icon=\"material-symbols:info-outline-rounded\" className='text-2xl mx-2' />\n\t<p className='text-sm font-bold'>New update is available</p>\n</div>"
+    },
+    "success_alert": {
+      "htmlPreview": "<div class='bg-green-200 border border-[#00FF00]  rounded-full p-2 w-96 text-black flex items-center gap-1'>\n<iconify-icon class='text-xl' icon=\"clarity:success-standard-line\"></iconify-icon>\n <p class='text-sm font-bold'>The update was successfully installed!</p>\n</div>",
+
+      "htmlFormatted":"<div class='bg-green-200 border border-[#00FF00]  rounded-full p-2 w-96 text-black flex items-center gap-1'>\n <iconify-icon class='text-xl' icon=\"clarity:success-standard-line\"></iconify-icon>\n <p class='text-sm font-bold'>The update was successfully installed!</p>\n</div>",
+
+      "jsxFormatted": "<div className='bg-green-200 border border-[#00FF00] rounded-full p-2 w-96 text-black flex items-center gap-1'>\n\t<Icon icon=\"clarity:success-standard-line\" className='text-2xl mx-2' />\n\t<p className='text-sm font-bold'>The update was successfully installed!</p>\n</div>"
+    },
+    "warning_alert": {
+      "htmlPreview": "<div class='bg-[#FFEAAE] border border-[#FFBE00] rounded-full p-2 w-96 text-black flex items-center gap-1'>\n <iconify-icon class='text-xl' icon=\"ph:warning-bold\"></iconify-icon>\n <p class='text-sm font-bold'>The update was successfully installed!</p>\n</div>",
+
+      "htmlFormatted": "<div class='bg-[#FFEAAE] border border-[#FFBE00] rounded-full p-2 w-96 text-black flex items-center gap-1'>\n <iconify-icon class='text-xl' icon=\"ph:warning-bold\"></iconify-icon>\n <p class='text-sm font-bold'>The update was successfully installed!</p>\n</div>",
+
+      "jsxFormatted": "<div className='bg-green-200 border border-[#00FF00] rounded-full p-2 w-96 text-black flex items-center gap-1'>\n\t<Icon icon=\"ph:warning-bold\" className='text-2xl mx-2' />\n\t<p className='text-sm font-bold'>The update was successfully installed!</p>\n</div>"
+    },
+    "error_alert": {
+      "htmlPreview":"<div class='bg-[#FF9898] border border-[#FD0000]  rounded-full p-2 w-96 text-black flex items-center gap-1'>\n <iconify-icon class='text-xl' icon=\"codicon:error\"></iconify-icon>\n <p class='text-sm font-bold'>This action may have undesired consequences.</p>\n</div>",
+
+      "htmlFormatted":"<div class='bg-[#FF9898] border border-[#FD0000]  rounded-full p-2 w-96 text-black flex items-center gap-1'>\n <iconify-icon class='text-xl' icon=\"codicon:error\"></iconify-icon>\n <p class='text-sm font-bold'>This action may have undesired consequences.</p>\n</div>",
+
+      "jsxFormatted": "<div className='bg-[#FF9898] border border-[#FD0000] rounded-full p-2 w-96 text-black flex items-center gap-1'>\n\t<Icon icon=\"codicon:error\" className='text-2xl mx-2' />\n\t<p className='text-sm font-bold'>This action may have undesired consequences.</p>\n</div>"
+    },
+    "message_alert": {
+      "htmlPreview": "<div class='bg-white border border-[#C71585] rounded-lg p-2 w-96 text-black flex items-center gap-1'>\n <iconify-icon class='text-xl' icon=\"mingcute:notification-line\"> </iconify-icon>\n <p class='text-sm font-bold'>You have a new message!</p>\n</div>",
+      
+      "htmlFormatted":"<div class='bg-[#f77fbf] border border-[#C71585]  rounded-full p-2 w-96 text-black flex items-center gap-1'>\n <iconify-icon class='text-xl' icon=\"mingcute:notification-line\"></iconify-icon>\n <p class='text-sm font-bold'>You have a new message!</p>\n</div>",
+      
+      "jsxFormatted":"<div className='bg-[#f77fbf] border border-[#C71585] rounded-full p-2 w-96 text-black flex items-center gap-1'>\n\t<Icon icon=\"mingcute:notification-line\" className='text-2xl mx-2' />\n\t<p className='text-sm font-bold'>You have a new message!</p>\n</div>"
+    },
+
+    "register": {
+    "htmlPreview": "<div class='w-[256px] h-[187px] rounded-2xl bg-white my-10 relative text-black shadow-lg shadow-gray-300'>\n    <iconify-icon class='absolute top-0 right-0 m-2 text-xl' icon=\"mdi:close-outline\" color='black'></iconify-icon>\n<div class='flex flex-col justify-center items text-center h-full'>\n<h2 class='font-bold text-sm'>User123782</h2>\n <p class='text-xs'>has been successfully registered</p>\n <iconify-icon class='text-3xl self-center m-2' icon=\"flat-color-icons:ok\"></iconify-icon>\n</div>\n</div>",
+
+    "htmlFormatted": "<div class='w-[256px] h-[187px] rounded-2xl bg-white my-10 relative text-black shadow-lg shadow-gray-300'>\n    <iconify-icon class='absolute top-0 right-0 m-2 text-xl' icon=\"mdi:close-outline\" color='black'></iconify-icon>\n<div class='flex flex-col justify-center items text-center h-full'>\n<h2 class='font-bold text-sm'>User123782</h2>\n <p class='text-xs'>has been successfully registered</p>\n <iconify-icon class='text-3xl self-center m-2' icon=\"flat-color-icons:ok\"></iconify-icon>\n</div>\n</div>",
+
+   "jsxFormatted": "<div className='w-[256px] h-[187px] rounded-2xl bg-white my-10 relative text-black shadow-lg shadow-gray-300'>\n<Icon className='absolute top-0 right-0 m-2 text-xl' icon=\"mdi:close-outline\" color='black'/>\n<div className='flex flex-col justify-center items text-center h-full'>\n<h2 className='font-bold text-sm'>User123782</h2>\n <p className='text-xs'>has been successfully registered</p>\n <Icon className='text-3xl self-center m-2' icon=\"flat-color-icons:ok\" />\n</div>\n</div>"
+      }
+    
+    
+  }
+  
